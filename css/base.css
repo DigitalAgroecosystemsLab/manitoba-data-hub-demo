@@ -1,0 +1,132 @@
+/* Manitoba Agricultural Data Portal - tokens + base layout. No external fonts or assets (offline-safe). */
+:root {
+  --navy: #0f2744;
+  --ink: #1b2a3a;
+  --muted: #5a6a7a;
+  --faint: #8a98a6;
+  --line: #e1e8ee;
+  --line-soft: #edf2f5;
+  --bg: #f3f7f5;
+  --surface: #ffffff;
+  --green-900: #1c4a28;
+  --green-800: #25602f;
+  --green-700: #2f6b3a;
+  --green-600: #3d8a49;
+  --green-500: #55a65f;
+  --green-200: #cfe6cf;
+  --green-100: #e8f3e7;
+  --green-50: #f3faf2;
+  --blue-800: #165a8a;
+  --blue-700: #1f6fa8;
+  --blue-500: #3b93cf;
+  --blue-200: #cfe5f5;
+  --blue-100: #e5f1fa;
+  --amber-700: #a76f00;
+  --amber-500: #e0a100;
+  --amber-100: #fff3cf;
+  --red-700: #a8322a;
+  --red-500: #c0392b;
+  --red-100: #fbe3e0;
+  --radius-sm: 10px;
+  --radius: 16px;
+  --radius-lg: 24px;
+  --shadow-sm: 0 1px 2px rgba(15, 39, 68, .06), 0 1px 3px rgba(15, 39, 68, .05);
+  --shadow: 0 6px 20px rgba(15, 39, 68, .08), 0 1px 3px rgba(15, 39, 68, .05);
+  --shadow-lg: 0 18px 50px rgba(15, 39, 68, .14), 0 3px 10px rgba(15, 39, 68, .06);
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --header-h: 76px;
+  --maxw: 1240px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; font-family: var(--font); color: var(--ink); background: var(--bg);
+  font-size: 15px; line-height: 1.5; -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4 { font-family: var(--font-display); color: var(--navy); margin: 0; line-height: 1.2; letter-spacing: -.01em; }
+p { margin: 0; }
+a { color: var(--blue-700); text-decoration: none; }
+a:hover { text-decoration: underline; }
+button { font: inherit; color: inherit; cursor: pointer; border: 0; background: none; padding: 0; }
+input, select, textarea { font: inherit; color: inherit; }
+svg { display: block; }
+:focus-visible { outline: 3px solid rgba(59, 147, 207, .55); outline-offset: 2px; border-radius: 8px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.icon { width: 1.25em; height: 1.25em; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 50; height: var(--header-h);
+  background: rgba(255, 255, 255, .92); backdrop-filter: saturate(1.4) blur(12px);
+  border-bottom: 1px solid var(--line); box-shadow: 0 1px 12px rgba(15, 39, 68, .04);
+}
+.header-inner { max-width: 1480px; height: 100%; margin: 0 auto; padding: 0 28px; display: flex; align-items: center; gap: 28px; }
+.brand { display: flex; align-items: center; gap: 12px; color: var(--navy); text-decoration: none !important; flex: none; }
+.brand-mark { width: 50px; height: 50px; }
+.brand-text { font-family: var(--font-display); font-weight: 700; font-size: 19px; line-height: 1.08; letter-spacing: -.015em; }
+.main-nav { margin-left: auto; display: flex; align-items: center; gap: 4px; }
+.main-nav a {
+  padding: 9px 13px; border-radius: 999px; color: var(--ink); font-weight: 500; font-size: 14.5px; white-space: nowrap;
+  transition: background .15s, color .15s; text-decoration: none;
+}
+.main-nav a:hover { background: var(--green-50); color: var(--green-800); text-decoration: none; }
+.main-nav a.active { background: var(--green-100); color: var(--green-900); font-weight: 600; }
+.header-tools { display: flex; gap: 10px; flex: none; }
+.round-btn {
+  width: 42px; height: 42px; border-radius: 50%; background: #eef2f5; display: grid; place-items: center; color: var(--ink);
+  transition: background .15s, transform .15s;
+}
+.round-btn:hover { background: var(--green-100); transform: translateY(-1px); }
+
+/* ---------- Layout ---------- */
+main#app { min-height: calc(100vh - var(--header-h)); }
+.container { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+.page { padding: 32px 0 90px; }
+.page-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 24px; flex-wrap: wrap; }
+.page-head h1 { font-size: 34px; font-weight: 800; }
+.page-head p { color: var(--muted); max-width: 720px; margin-top: 6px; font-size: 16px; }
+.eyebrow { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--green-700); font-weight: 700; }
+.grid { display: grid; gap: 20px; }
+
+/* ---------- Floating system status + prototype label ---------- */
+.status-dock { position: fixed; left: 16px; bottom: 14px; z-index: 60; }
+.proto-label {
+  position: fixed; right: 16px; bottom: 14px; z-index: 60; display: flex; align-items: center; gap: 8px;
+  padding: 7px 13px; border-radius: 999px; background: rgba(255, 243, 207, .96); color: #7a5200;
+  border: 1px solid #ecd48a; font-size: 12px; font-weight: 600; letter-spacing: .02em; box-shadow: var(--shadow-sm);
+}
+.proto-label::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--amber-500); box-shadow: 0 0 0 3px rgba(224, 161, 0, .2); }
+
+/* ---------- Footer ---------- */
+.site-footer { background: var(--navy); color: #cdd9e6; padding: 42px 0 90px; margin-top: 40px; }
+.site-footer .container { display: flex; gap: 40px; justify-content: space-between; flex-wrap: wrap; }
+.site-footer h4 { color: #fff; font-size: 15px; margin-bottom: 10px; }
+.site-footer p, .site-footer li { font-size: 13.5px; color: #aebdce; }
+.site-footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+.site-footer a { color: #cfe0f0; }
+.footer-tag { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: #fff; max-width: 420px; line-height: 1.3; }
+.footer-tag span { color: #8fd29b; }
+
+/* ---------- Page transitions ---------- */
+.fade-in { animation: fadeIn .35s ease both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .45; } }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@media (max-width: 1180px) {
+  .brand-text { font-size: 16px; }
+  .main-nav a { padding: 8px 9px; font-size: 13.5px; }
+  .header-inner { gap: 14px; padding: 0 16px; }
+}
+@media (max-width: 980px) {
+  .main-nav { display: none; }
+  .header-tools { margin-left: auto; }
+  .nav-toggle { display: grid !important; }
+  .main-nav.open { display: flex; position: absolute; top: var(--header-h); left: 0; right: 0; background: #fff; flex-direction: column; align-items: stretch; padding: 12px; border-bottom: 1px solid var(--line); box-shadow: var(--shadow); }
+}
+.nav-toggle { display: none; }
+@media print { .site-header, .status-dock, .proto-label { display: none; } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } html { scroll-behavior: auto; } }
