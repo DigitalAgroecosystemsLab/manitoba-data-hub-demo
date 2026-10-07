@@ -14,7 +14,7 @@ Live demo: https://digitalagroecosystemslab.github.io/manitoba-data-hub-demo/
 
 This prototype illustrates the proposed **Manitoba Soil Data & Intelligence Hub**: an interoperable, FAIR (Findable, Accessible, Interoperable, Reusable) and interpretable layer that would connect existing and future soil information without replacing the systems that hold it. Users begin with a plain-language question and get a traceable answer that shows the data, methods, limitations and uncertainty behind it. The motto: *Ask the data, not the database.*
 
-It was prepared to support discussion of a potential NSERC Alliance partnership. Soils are the proposed Phase 1 focus. Crops, water, climate, grasslands and environment are a longer-term vision. The interface carries the broader working name "Manitoba Agricultural Data Portal".
+Soils are the proposed Phase 1 focus. Crops, water, climate, grasslands and environment are a longer-term vision. The interface carries the broader working name "Manitoba Agricultural Data Portal".
 
 What you can try here: ask one of five example questions, explore the data catalogue, maps and dashboards, and open "How was this answer generated?" to see the sources, uncertainty and checks behind each answer. In the full prototype, a locally run language model writes the answers, but it only explains evidence that was computed in code and never acts as the data source.
 
