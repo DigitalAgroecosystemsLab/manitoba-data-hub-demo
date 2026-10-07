@@ -5,6 +5,7 @@
   const PARTNERS = {
     gov: { name: 'Government of Manitoba', src: 'assets/logos/government-of-manitoba.png', w: 190 },
     um: { name: 'University of Manitoba', src: 'assets/logos/university-of-manitoba.png', w: 170 },
+    lab: { name: 'Digital AgroEcosystems Lab', src: 'assets/logos/digital-agroecosystems-lab.png', w: 150 },
   };
   const logo = (key, h_) => h('img', { class: 'partner-logo', src: PARTNERS[key].src, alt: PARTNERS[key].name + ' logo', style: { height: (h_ || 46) + 'px' }, loading: 'eager' });
 
@@ -13,7 +14,8 @@
       h('div', { class: 'eyebrow' }, 'Partners & collaborators'),
       h('div', { class: 'partner-row' },
         h('a', { class: 'partner-tile', href: '#/hub/mb', title: 'MB Core Data' }, logo('gov', 52)),
-        h('a', { class: 'partner-tile', href: '#/hub/um', title: 'UM Research' }, logo('um', 58))),
+        h('a', { class: 'partner-tile', href: '#/hub/um', title: 'UM Research' }, logo('um', 58)),
+        h('a', { class: 'partner-tile', href: 'https://github.com/DigitalAgroecosystemsLab', target: '_blank', rel: 'noopener', title: 'Digital AgroEcosystems Lab' }, logo('lab', 58))),
       h('p', { class: 'muted' }, 'Prototype prepared for an NSERC Alliance proposal. Logos identify the proposed partners; they do not indicate endorsement of this demonstration.'));
   }
   M.ui = M.ui || {};
