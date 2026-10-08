@@ -28,6 +28,6 @@ University of Manitoba research assets, including soil laboratory, mapping, spec
 
 ### Government of Manitoba
 
-The Government of Manitoba is a potential partner for the proposed NSERC Alliance project. Its participation would help ensure the work is designed around real provincial information needs.
+The Government of Manitoba is a vital research partner and its participation would help ensure the work is designed around real provincial information needs.
 
 **No funding or partnership commitments are implied.** Logos identify the proposed partners; they do not indicate endorsement of this demonstration.
