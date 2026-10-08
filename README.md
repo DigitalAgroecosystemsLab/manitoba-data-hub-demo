@@ -20,7 +20,7 @@ What you can try here: ask one of five example questions, explore the data catal
 
 ### Nasem Badreldin and the Digital AgroEcosystems Lab
 
-The concept and this prototype were prepared by **Nasem Badreldin** and the **[Digital AgroEcosystems Lab](https://github.com/DigitalAgroecosystemsLab)** at the University of Manitoba.
+The concept and this prototype were prepared by **[Nasem Badreldin](https://umanitoba.ca/agricultural-food-sciences/soil-science/nasem-badreldin)** and the **[Digital AgroEcosystems Lab](https://www.digitalagroecosystemslab.ca/)** at the University of Manitoba.
 
 ### University of Manitoba
 
